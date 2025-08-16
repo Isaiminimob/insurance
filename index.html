@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Comprehensive Guide to Web Hosting</title>
+    <title>WEBHOSTING</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social icons and hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLp3S6l0e0b9b3S8p2t8n0P8n6t5a6d5q2qG2a5l1b8f1g5b3f5z3e0b8d7e9b4d8a2a5g6b5g5e7e9f3g5f4d3c2c5c5g4a5f3g7f5l1" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -96,19 +98,45 @@
 
 <body class="bg-gray-50 text-gray-900 leading-relaxed antialiased">
 
-    <!-- Header Section -->
+    <!-- Header Section with Navigation -->
     <header class="bg-blue-600 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-8 md:py-12 flex flex-col items-center text-center">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold">WEBHOSTING</a>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#about" class="hover:text-blue-200 transition-colors">About Us</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition-colors">Contact Us</a></li>
+                <li><a href="#disclaimer" class="hover:text-blue-200 transition-colors">Disclaimer</a></li>
+                <li><a href="#privacy" class="hover:text-blue-200 transition-colors">Privacy Policy</a></li>
+            </ul>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl p-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-700 w-full">
+            <ul class="flex flex-col space-y-2 px-4 py-4">
+                <li><a href="#about" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">About Us</a></li>
+                <li><a href="#contact" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Contact Us</a></li>
+                <li><a href="#disclaimer" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Disclaimer</a></li>
+                <li><a href="#privacy" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="container mx-auto px-4 py-12 md:py-20 flex flex-col items-center text-center">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Your Guide to Web Hosting</h1>
-            <p class="text-base sm:text-lg max-w-2xl opacity-90">
+            <p class="text-base sm:text-lg max-w-2xl opacity-90 mb-6">
                 A one-stop resource for understanding web hosting, choosing the right provider, and making your website
                 a success.
             </p>
+            <a href="#main-content" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-md">
+                Get Started
+            </a>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <div class="container mx-auto px-4 py-8 md:py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div id="main-content" class="container mx-auto px-4 py-8 md:py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Sidebar Section (Now at the top) -->
         <aside class="md:col-span-1 space-y-8">
@@ -117,7 +145,7 @@
             <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-md">
                 <h3 class="text-xl sm:text-2xl font-bold mb-4">Ask our AI Assistant</h3>
                 <p class="text-gray-600 mb-4">
-                    Ask any question about web hosting, and our AI will provide an answer.
+                    Ask any question about web hosting.
                 </p>
                 <div class="space-y-4">
                     <input type="text" id="ai-search-input"
@@ -131,7 +159,7 @@
                         <div class="search-loader"></div>
                     </div>
                     <div id="ai-search-results"
-                        class="bg-gray-50 p-4 rounded-xl border border-gray-200 mt-4 overflow-y-auto max-h-64">
+                        class="bg-gray-50 p-4 rounded-xl border border-gray-200 mt-4 overflow-y-auto max-h-96">
                         <p class="text-gray-500 italic">Your answers will appear here.</p>
                     </div>
                 </div>
@@ -150,63 +178,109 @@
         <!-- Main Article Section -->
         <main class="md:col-span-2">
             <article class="bg-white p-6 sm:p-8 rounded-2xl shadow-md">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-6">Demystifying Web Hosting: The Foundation of the Web
-                </h2>
+                <h2 class="text-2xl sm:text-3xl font-bold mb-6">A Simple Guide to Web Hosting: Your Website's Home</h2>
                 <div class="prose max-w-none text-justify">
                     <p class="mb-4">
-                        In the vast and interconnected world of the internet, every website you visit, from a simple blog to a massive e-commerce store, needs a home. This digital home is what we call web hosting. At its core, web hosting is the service that makes your website accessible to everyone on the internet. A web host is a company that provides the technologies and services needed for the website or webpage to be viewed on the Internet. Websites are stored, or hosted, on special computers called servers. When a user types your website's domain name into their browser, the server delivers the website's files and content to their computer. Without web hosting, your website would be nothing more than files on your personal computer, unreachable by the public. Understanding the different types of hosting is the first step toward building a successful online presence, as the right choice can significantly impact your site's performance, security, and scalability.
+                        Think of the internet like a huge city. Every website you visit, from a small blog to a massive online store, needs a place to live. Web hosting is basically the service that gives your website a home so people can visit it. A web host is a company that has special computers called servers where your website's files are stored. When someone types your website's name into their browser, the server sends your site's files to their computer. Without hosting, your website would just be files sitting on your computer—no one else could see them!
                     </p>
 
-                    <h3 class="text-xl font-semibold mb-3 mt-6">The Different Types of Web Hosting: A Breakdown</h3>
+                    <h3 class="text-xl font-semibold mb-3 mt-6">Picking the Right Kind of Home for Your Website</h3>
                     <p class="mb-4">
-                        Web hosting isn't a one-size-fits-all solution. Different websites have different needs, which is why there are several types of hosting to choose from. Each type offers a unique balance of cost, performance, and control.
+                        Just like a person can live in an apartment, a house, or a mansion, websites have different housing options too. Each type of hosting has its own pros and cons, depending on what your site needs.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">1. Shared Hosting</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">1. Shared Hosting: The Apartment Building</h4>
                     <p class="mb-4">
-                        Shared hosting is the most popular and affordable option, perfect for beginners, personal blogs, and small business websites. With shared hosting, your website is hosted on a single server alongside many other websites. Think of it like living in an apartment building: you share the same resources (CPU, RAM, disk space) with all your neighbors. The main advantage of this is the low cost, as the expense of maintaining the server is shared among all users. However, this also means that a sudden spike in traffic on a "neighboring" website could potentially slow down your own site's performance. It's a great entry point for those with minimal technical knowledge and low traffic expectations.
+                        This is the most common and cheapest option. With shared hosting, your website lives on a server with many other websites, kind of like sharing an apartment building with dozens of other tenants. You're all sharing the same resources, like CPU and memory. This is great if you're just starting out with a personal blog or a small business site, but if one of your "neighbors" gets a ton of traffic, it can slow down your site. Shared hosting is incredibly popular for new websites because of its affordability and ease of use. Most providers offer a simple one-click installation for platforms like WordPress, making it easy to get your site up and running in minutes. However, because you're sharing resources, you might experience slower load times during peak traffic periods. It's best suited for static websites, personal portfolios, and low-traffic blogs.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">2. VPS (Virtual Private Server) Hosting</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">2. VPS Hosting: The Condo</h4>
                     <p class="mb-4">
-                        VPS hosting is the next step up from shared hosting. It's a more powerful and flexible option, ideal for growing businesses, medium-sized e-commerce sites, and popular blogs. In this model, a physical server is partitioned into several smaller, virtual servers. While you're still sharing the physical server with others, each virtual server operates independently with its own dedicated resources. This gives you more control, better performance, and enhanced security compared to shared hosting, without the high cost of a dedicated server. It's the perfect middle ground for websites that have outgrown shared hosting but aren't yet ready for a dedicated solution.
+                        VPS is the next step up. It's like living in a condo building. You're still sharing a physical building (the server), but you have your own private, locked-off unit (a virtual server) with dedicated resources. This means you get better performance and more control than shared hosting, without the high cost of a dedicated server. It's a perfect fit for a growing business or a more popular blog. VPS hosting provides a great balance between cost and performance. You have more control over the server environment and can install custom applications, which is a major advantage for developers and businesses with specific needs.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">3. Dedicated Hosting</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">3. Dedicated Hosting: The Mansion</h4>
                     <p class="mb-4">
-                        Dedicated hosting is the king of web hosting. With this option, your website gets its own private server, exclusively for your use. This is the ultimate solution for large enterprises, high-traffic websites, and resource-intensive applications. Having a dedicated server provides unparalleled performance, maximum control, and superior security. You have full administrative access to the server, allowing you to configure it exactly to your specifications. The downside is the cost, which is significantly higher than shared or VPS hosting. It requires a high level of technical expertise to manage the server effectively.
+                        This is the top tier. With dedicated hosting, you have an entire server all to yourself—a mansion just for your website. This gives you unbeatable performance, total control, and maximum security. It's the best option for large companies, huge e-commerce sites, or anything with a ton of visitors. The only catch is that it's much more expensive and you'll need some technical know-how to manage it. Dedicated servers are ideal for websites that receive millions of visitors or require strict security and compliance standards. They offer unparalleled customization and reliability, but they come with a significant cost and maintenance responsibility.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">4. Cloud Hosting</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">4. Cloud Hosting: The City That Never Sleeps</h4>
                     <p class="mb-4">
-                        Cloud hosting is a modern, highly scalable solution. Instead of being hosted on a single server, your website is hosted on a network of interconnected servers. This provides immense flexibility and reliability. If one server goes down, another one takes over seamlessly. The key feature of cloud hosting is its "pay-as-you-go" model, where you only pay for the resources you actually use. This makes it an excellent choice for websites with fluctuating traffic, such as e-commerce sites during seasonal sales or media websites with viral content. It's the most reliable option for ensuring maximum uptime and handling unexpected traffic spikes.
+                        Cloud hosting is a super flexible and reliable option. Instead of living on one server, your website is spread out across a network of connected servers. If one server goes down, another one instantly takes over. It's like having your own portable home that can be moved anywhere in the city at a moment's notice. The best part is you only pay for what you use, so it's awesome for websites with traffic that changes a lot, like a site that's about to go viral. This model is perfect for businesses with seasonal traffic spikes or large-scale applications that need to scale on demand.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">5. Managed WordPress Hosting</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">5. Managed WordPress Hosting: The All-Inclusive Resort</h4>
                     <p class="mb-4">
-                        For the millions of websites built on WordPress, managed WordPress hosting is a fantastic specialized option. It is a type of hosting environment that is specifically optimized for WordPress websites. The hosting provider handles all the technical aspects, including performance optimization, security, backups, and WordPress updates. This allows website owners to focus solely on their content and business, without worrying about the technical maintenance of their site. While it can be more expensive than generic shared hosting, the benefits of enhanced performance, security, and dedicated support often outweigh the cost for serious bloggers and businesses.
+                        If your website is built on WordPress, this is a great option. It's like checking into an all-inclusive resort for your site. The hosting company handles all the boring stuff for you: security, updates, backups, and making sure your site runs super fast. You get to focus on creating content and running your business, and they take care of everything else. It can cost a bit more, but the peace of mind is worth it for many people. Managed WordPress hosting is a premium service designed specifically for the platform, offering optimized performance and expert support that can save you a lot of time and effort.
                     </p>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Choosing the Right Hosting Provider</h3>
                     <p class="mb-4">
-                        Selecting a hosting provider is a crucial decision that will impact your website's future. It's not just about finding the cheapest option; it's about finding a provider that offers the best value for your specific needs. Here are the key factors to consider:
+                        Picking a hosting company is a big deal, so you want to choose one that's the right fit. Don't just go for the cheapest one—think about what you'll really need. Here are a few things to look for:
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li>Uptime Guarantee: Look for a provider with a high uptime guarantee (99.9% or higher). This ensures your website is almost always online and accessible to visitors.</li>
-                        <li>Customer Support: When things go wrong, you need reliable support. Check for providers that offer 24/7 support via live chat, phone, or email. Good customer support can be a lifesaver.</li>
-                        <li>Performance and Speed: Website speed is critical for user experience and SEO. Choose a host that uses fast hardware (SSDs), offers a Content Delivery Network (CDN), and has robust infrastructure to ensure quick loading times.</li>
-                        <li>Security Features: Your website's security is paramount. Look for features like free SSL certificates, automated backups, malware scanning, and DDoS protection.</li>
-                        <li>Scalability: Consider your future growth. Can you easily upgrade your plan to a more powerful one as your website's traffic increases? A flexible host makes scaling a seamless process.</li>
-                        <li>Pricing and Money-Back Guarantee: While you shouldn't just look for the cheapest host, compare pricing models and look for hosts that offer a no-questions-asked money-back guarantee.</li>
+                        <li><strong>Uptime Guarantee:</strong> This is how often your website is online. Look for a host that promises 99.9% uptime or higher.</li>
+                        <li><strong>Customer Support:</strong> When something goes wrong, you want help fast. Check if they offer 24/7 support by chat or phone. Good support can be a lifesaver.</li>
+                        <li><strong>Speed and Performance:</strong> Slow websites can drive visitors away. Look for a host that uses fast hardware and offers a CDN (Content Delivery Network).</li>
+                        <li><strong>Security Features:</strong> Your site's safety is super important. Make sure they offer things like free SSL certificates and automatic backups.</li>
+                        <li><strong>Scalability:</strong> What if your website gets huge? Can you easily upgrade your plan to handle more traffic?</li>
+                        <li><strong>Pricing:</strong> Compare prices, but also look for a money-back guarantee. It's good to know you can get a refund if it's not the right fit.</li>
                     </ul>
 
-                    <h3 class="text-xl font-semibold mb-3 mt-6">Hosting Comparison Table</h3>
+                    <h3 class="text-xl font-semibold mb-3 mt-6">Detailed Hosting Provider Comparisons</h3>
+                    <p class="mb-4">
+                        To help you narrow down your choices, here's a look at how some popular providers stack up against each other.
+                    </p>
+
+                    <h4 class="text-lg font-medium mb-2 mt-4">Hostinger vs. Bluehost</h4>
+                    <p class="mb-2">
+                        Both Hostinger and Bluehost are excellent choices for beginners and small websites, but they have different strengths.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Hostinger:</strong> Known for its incredibly low prices, often starting under $2 per month. It uses its own custom hPanel, which is very user-friendly. Their plans are fast and include a free SSL certificate. It's a fantastic value for new websites.</li>
+                        <li><strong>Bluehost:</strong> One of the most well-known hosts, officially recommended by WordPress. It's a safe bet for anyone using WordPress, offering a seamless integration and a free domain name for the first year. While their renewal prices can be higher, their initial low cost and included features make them a great choice.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-medium mb-2 mt-4">Cloudways vs. IONOS</h4>
+                    <p class="mb-2">
+                        This is a comparison between two different types of hosting services. Cloudways is a managed cloud platform, while IONOS is a more traditional hosting provider.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Cloudways:</strong> This is for users who need power and flexibility without the complexity of managing a cloud server. You can choose from top providers like AWS, Google Cloud, and DigitalOcean. It has a "pay-as-you-go" pricing model, which is great for websites with unpredictable traffic.</li>
+                        <li><strong>IONOS:</strong> A very affordable, all-in-one solution. They offer a wide range of products including hosting, domains, and email. Their plans are structured and simple to understand, making them a good fit for personal and small business sites that need a predictable, low-cost solution.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-medium mb-2 mt-4">GoDaddy vs. A2 Hosting</h4>
+                    <p class="mb-2">
+                        GoDaddy is a household name, but A2 Hosting has built a reputation on one key feature: speed.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>GoDaddy:</strong> The go-to for many beginners for its simple, bundled services. You can get a domain and hosting in one place. Their plans are generally entry-level and come with a user-friendly control panel, but they may not be the fastest.</li>
+                        <li><strong>A2 Hosting:</strong> This host focuses on performance. They are well-known for their "Turbo Servers" which they claim are up to 20x faster. While their prices can be slightly higher, the performance boost is well worth it for users who prioritize site speed. They also have a reputation for excellent support.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-medium mb-2 mt-4">Google Cloud vs. AWS Cloud</h4>
+                    <p class="mb-2">
+                        These are not traditional web hosts. They are powerful cloud computing platforms designed for developers and large-scale applications.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Google Cloud:</strong> This platform is known for its incredible speed and reliability. It's a great choice for companies that need powerful, scalable infrastructure and want to leverage Google's other services, like their machine learning tools. The interface is often considered more developer-friendly than AWS.</li>
+                        <li><strong>AWS (Amazon Web Services):</strong> The leader in the cloud computing market. AWS offers a massive suite of over 200 services. While it can be more complex to navigate, it provides unmatched flexibility and the ability to build and scale virtually any kind of application. It's the standard for many enterprise-level applications.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3 mt-6">Web Hosting Comparison Table</h3>
+                    <p class="mb-4">
+                        Here is a detailed comparison of some of the leading web hosting providers to help you make an informed decision based on your specific needs.
+                    </p>
                     <div class="overflow-x-auto mb-6">
                         <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow">
                             <thead class="bg-gray-50">
                                 <tr>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                                        Hosting Type
+                                        Provider
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                        Hosting Types
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Best For
@@ -221,33 +295,73 @@
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">Shared Hosting</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Beginners, blogs, small sites</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Very affordable, easy to use</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Hostinger</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Cloud, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Budget-conscious users, beginners</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, user-friendly, good performance</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">VPS Hosting</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Growing businesses, e-commerce</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">More control, better performance</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Bluehost</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">WordPress users, beginners</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Officially recommended by WordPress, free domain</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">SiteGround</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, Cloud, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Speed-focused websites, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High performance, robust security, great support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">Dedicated Hosting</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Large businesses, high-traffic sites</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Maximum performance & control</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">A2 Hosting</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Developers, users needing speed</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High-speed "Turbo Servers", free site migration</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Medium</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">GoDaddy</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">All-in-one solution, domain and hosting</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Comprehensive toolset, easy setup</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">DreamHost</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Users valuing privacy and support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">97-day money-back guarantee, custom control panel</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Cloudways</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Cloud</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Scalability, developers, agencies</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Managed cloud hosting, pay-as-you-go pricing</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Variable</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Kinsta</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Managed WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High-traffic WordPress sites, businesses</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Built on Google Cloud, premium performance, expert support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">High</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">Cloud Hosting</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Scalable apps, unpredictable traffic</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Scalability, reliability</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Variable (Pay-as-you-go)</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Liquid Web</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">VPS, Dedicated, Cloud</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Large businesses, mission-critical sites</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">"Heroic Support", managed services, high availability</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High</td>
                                 </tr>
                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">WPEngine</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Managed WordPress</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">WordPress sites, bloggers</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Optimized performance, hands-off management</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Professional WordPress sites, agencies</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Secure, scalable, staging environments, excellent support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium to High</td>
                                 </tr>
                             </tbody>
@@ -255,7 +369,7 @@
                     </div>
 
                     <p class="mb-4">
-                        In conclusion, the world of web hosting is diverse, offering a solution for every kind of website. By understanding the fundamentals and knowing what to look for, you can choose a hosting plan that not only meets your current needs but also supports your future growth. Whether you're a first-time blogger or a seasoned developer, the right hosting is the silent hero that keeps your online dream alive and thriving.
+                        Understanding the different types of web hosting and what to look for in a provider is the first and most crucial step in creating a successful online presence. The world of web hosting can seem a little confusing at first, but with the right knowledge, you can easily find a home for your website that works for you. Whether you're a brand new blogger or a seasoned pro, the right hosting provider is the unsung hero that keeps your online dreams running smoothly. By considering your budget, technical needs, and long-term goals, you can choose a hosting solution that provides a solid foundation for your website to grow and thrive.
                     </p>
                 </div>
             </article>
@@ -264,7 +378,7 @@
     </div>
 
     <!-- The Modal Structure -->
-    <div id="modal" class="modal flex">
+    <div id="modal" class="modal">
         <div class="modal-content text-gray-800">
             <span class="close-button" id="modal-close">&times;</span>
             <div id="modal-body" class="p-4 sm:p-6 overflow-y-auto max-h-[80vh]">
@@ -273,14 +387,31 @@
         </div>
     </div>
 
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between space-y-8 md:space-y-0">
+            <div class="text-center md:text-left">
+                <p class="text-lg font-bold mb-2">WEBHOSTING</p>
+                <p>&copy; 2024 All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fab fa-instagram-square"></i></a>
+                <a href="#" class="hover:text-blue-500 transition-colors"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
     <script>
         // Data for hosting providers
         const hostingProviders = [{
-                name: 'Hostinger',
-                type: 'Shared, VPS, Cloud, WordPress',
-                summary: 'Known for affordable plans and excellent performance, Hostinger offers a user-friendly experience ideal for beginners and small to medium-sized websites.',
-                details: `Hostinger is a popular choice for budget-conscious users without compromising on features. Their plans include a free SSL certificate, a website builder, and 24/7/365 customer support. The hPanel control panel is intuitive and easy to navigate. They offer a 99.9% uptime guarantee and SSD-based storage for fast loading speeds. The Managed WordPress plans are highly optimized for performance and security.`,
-                plans: `
+            name: 'Hostinger',
+            type: 'Shared, VPS, Cloud, WordPress',
+            summary: 'Known for affordable plans and excellent performance, Hostinger offers a user-friendly experience ideal for beginners and small to medium-sized websites.',
+            details: `Hostinger is a popular choice for budget-conscious users without compromising on features. Their plans include a free SSL certificate, a website builder, and 24/7/365 customer support. The hPanel control panel is intuitive and easy to navigate. They offer a 99.9% uptime guarantee and SSD-based storage for fast loading speeds. The Managed WordPress plans are highly optimized for performance and security.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Single Shared Hosting: Best for personal blogs.</li>
@@ -288,14 +419,16 @@
                         <li>Business Shared Hosting: For medium-sized sites and e-commerce stores.</li>
                     </ul>
                 `,
-                url: 'https://www.hostinger.com'
-            },
-            {
-                name: 'Bluehost',
-                type: 'Shared, VPS, Dedicated, WordPress',
-                summary: 'An officially recommended WordPress host, Bluehost is a reliable and well-established provider with a focus on beginner-friendly tools and services.',
-                details: `Bluehost is one of the most recognized names in the web hosting industry and is officially recommended by WordPress.org. They offer a range of hosting services, with a strong emphasis on ease of use. Their customer support is available 24/7 via phone and live chat. They provide a free domain name for the first year and an SSL certificate with all their shared hosting plans. Their platform is integrated with the WordPress dashboard, making it seamless for WordPress users.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.hostinger.com'
+        }, {
+            name: 'Bluehost',
+            type: 'Shared, VPS, Dedicated, WordPress',
+            summary: 'An officially recommended WordPress host, Bluehost is a reliable and well-established provider with a focus on beginner-friendly tools and services.',
+            details: `Bluehost is one of the most recognized names in the web hosting industry and is officially recommended by WordPress.org. They offer a range of hosting services, with a strong emphasis on ease of use. Their customer support is available 24/7 via phone and live chat. They provide a free domain name for the first year and an SSL certificate with all their shared hosting plans. Their platform is integrated with the WordPress dashboard, making it seamless for WordPress users.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Basic: Single website, 50 GB SSD storage.</li>
@@ -303,14 +436,16 @@
                         <li>Choice Plus: All Plus features, plus domain privacy and automated backups.</li>
                     </ul>
                 `,
-                url: 'https://www.bluehost.com'
-            },
-            {
-                name: 'SiteGround',
-                type: 'Shared, Cloud, WordPress',
-                summary: 'SiteGround is known for its high-performance hosting, excellent customer support, and robust security features, making it a top choice for a wide range of users.',
-                details: `SiteGround prides itself on its superior technology and speed. They use SSD drives, custom PHP setups, and a robust caching system (SuperCacher) to ensure fast loading times. Their customer support is highly rated and available 24/7 through various channels. Security is a top priority, with features like custom firewall rules, AI-anti-bot systems, and daily backups. They are another officially recommended WordPress host and their platform is optimized for the platform.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.bluehost.com'
+        }, {
+            name: 'SiteGround',
+            type: 'Shared, Cloud, WordPress',
+            summary: 'SiteGround is known for its high-performance hosting, excellent customer support, and robust security features, making it a top choice for a wide range of users.',
+            details: `SiteGround prides itself on its superior technology and speed. They use SSD drives, custom PHP setups, and a robust caching system (SuperCacher) to ensure fast loading times. Their customer support is highly rated and available 24/7 through various channels. Security is a top priority, with features like custom firewall rules, AI-anti-bot systems, and daily backups. They are another officially recommended WordPress host and their platform is optimized for the platform.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>StartUp: For a single small to medium website.</li>
@@ -318,14 +453,16 @@
                         <li>GoGeek: For developers and larger websites with high traffic.</li>
                     </ul>
                 `,
-                url: 'https://www.siteground.com'
-            },
-            {
-                name: 'A2 Hosting',
-                type: 'Shared, VPS, Dedicated, Cloud, WordPress',
-                summary: 'A2 Hosting is famous for its "Guru Crew" customer support and high-speed "Turbo Servers," which are up to 20x faster than standard hosting.',
-                details: `A2 Hosting focuses on speed and developer-friendly features. They offer a variety of hosting plans, including the "Turbo" plans that promise significantly faster speeds. Their technical support team, known as the "Guru Crew," is available 24/7 and is highly knowledgeable. They provide free site migration, which is a great bonus for users looking to switch hosts. Their hosting is perfect for those who value performance and a knowledgeable support team.`,
-                plans: `
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.siteground.com'
+        }, {
+            name: 'A2 Hosting',
+            type: 'Shared, VPS, Dedicated, Cloud, WordPress',
+            summary: 'A2 Hosting is famous for its "Guru Crew" customer support and high-speed "Turbo Servers," which are up to 20x faster than standard hosting.',
+            details: `A2 Hosting focuses on speed and developer-friendly features. They offer a variety of hosting plans, including the "Turbo" plans that promise significantly faster speeds. Their technical support team, known as the "Guru Crew," is available 24/7 and is highly knowledgeable. They provide free site migration, which is a great bonus for users looking to switch hosts. Their hosting is perfect for those who value performance and a knowledgeable support team.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Drive: Best for multiple websites on a budget.</li>
@@ -333,43 +470,49 @@
                         <li>Turbo Max: The fastest option for high-traffic sites.</li>
                     </ul>
                 `,
-                url: 'https://www.a2hosting.com'
-            },
-            {
-                name: 'GoDaddy',
-                type: 'Shared, VPS, Dedicated, WordPress',
-                summary: 'A widely-known name in domain registration and hosting, GoDaddy offers a broad range of products and services for individuals and small businesses.',
-                details: `GoDaddy is a large and popular hosting provider with a comprehensive suite of online tools. While they are famous for domain registration, they also offer reliable hosting services. Their plans are easy to set up, and they have a large knowledge base and customer support network. GoDaddy's hosting is an all-in-one solution for those who want to manage their domain and hosting in one place.`,
-                plans: `
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.a2hosting.com'
+        }, {
+            name: 'GoDaddy',
+            type: 'Shared, VPS, Dedicated, WordPress',
+            summary: 'A widely-known name in domain registration and hosting, GoDaddy offers a broad range of products and services for individuals and small businesses.',
+            details: `GoDaddy is a large and popular hosting provider with a comprehensive suite of online tools. While they are famous for domain registration, they also offer reliable hosting services. Their plans are easy to set up, and they have a large knowledge base and customer support network. GoDaddy's hosting is an all-in-one solution for those who want to manage their domain and hosting in one place.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Economy: Basic plan for one website.</li>
-                        <li>Deluxe: Multiple websites with unmetered bandwidth.</li>
+                        <li>Deluxe: Unlimited websites with unmetered bandwidth.</li>
                         <li>Ultimate: More power for high-traffic sites.</li>
                     </ul>
                 `,
-                url: 'https://www.godaddy.com'
-            },
-            {
-                name: 'DreamHost',
-                type: 'Shared, VPS, Dedicated, Cloud',
-                summary: 'An independent hosting provider known for its strong privacy policy, excellent customer service, and a 97-day money-back guarantee.',
-                details: `DreamHost is a veteran in the hosting industry, offering a solid hosting experience with a focus on privacy and open-source technology. They provide free domain registration, free SSL, and a custom control panel that is simple to use. Their customer support is well-regarded and available 24/7.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.godaddy.com'
+        }, {
+            name: 'DreamHost',
+            type: 'Shared, VPS, Dedicated, Cloud',
+            summary: 'An independent hosting provider known for its strong privacy policy, excellent customer service, and a 97-day money-back guarantee.',
+            details: `DreamHost is a veteran in the hosting industry, offering a solid hosting experience with a focus on privacy and open-source technology. They provide free domain registration, free SSL, and a custom control panel that is simple to use. Their customer support is well-regarded and available 24/7.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Shared Starter: For one website.</li>
                         <li>Shared Unlimited: For multiple websites with more storage.</li>
                     </ul>
                 `,
-                url: 'https://www.dreamhost.com'
-            },
-            {
-                name: 'GreenGeeks',
-                type: 'Shared, VPS, Dedicated, Reseller',
-                summary: 'An eco-friendly hosting provider that puts back three times the power it consumes into the grid in the form of renewable energy.',
-                details: `GreenGeeks stands out for its commitment to the environment. Beyond their eco-friendly approach, they offer a solid hosting platform with fast performance, robust security, and 24/7 support. They include a free domain, free SSL, and free nightly backups with all their plans.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.dreamhost.com'
+        }, {
+            name: 'GreenGeeks',
+            type: 'Shared, VPS, Dedicated, Reseller',
+            summary: 'An eco-friendly hosting provider that puts back three times the power it consumes into the grid in the form of renewable energy.',
+            details: `GreenGeeks stands out for its commitment to the environment. Beyond their eco-friendly approach, they offer a solid hosting platform with fast performance, robust security, and 24/7 support. They include a free domain, free SSL, and free nightly backups with all their plans.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Lite: Best for beginners with one website.</li>
@@ -377,14 +520,16 @@
                         <li>Premium: For e-commerce and high-traffic sites.</li>
                     </ul>
                 `,
-                url: 'https://www.greengeeks.com'
-            },
-            {
-                name: 'InMotion Hosting',
-                type: 'Shared, VPS, Dedicated, WordPress',
-                summary: 'A business-class hosting provider known for its high-quality hosting, exceptional customer support, and a generous 90-day money-back guarantee.',
-                details: `InMotion Hosting provides a reliable hosting service with a focus on performance and customer care. They offer free SSDs, free site transfers, and a dedicated team of support experts. Their plans are well-suited for businesses of all sizes, from small blogs to large corporate websites.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.greengeeks.com'
+        }, {
+            name: 'InMotion Hosting',
+            type: 'Shared, VPS, Dedicated, WordPress',
+            summary: 'A business-class hosting provider known for its high-quality hosting, exceptional customer support, and a generous 90-day money-back guarantee.',
+            details: `InMotion Hosting provides a reliable hosting service with a focus on performance and customer care. They offer free SSDs, free site transfers, and a dedicated team of support experts. Their plans are well-suited for businesses of all sizes, from small blogs to large corporate websites.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Core: For small websites and blogs.</li>
@@ -392,55 +537,63 @@
                         <li>Power: For e-commerce and high-performance needs.</li>
                     </ul>
                 `,
-                url: 'https://www.inmotionhosting.com'
-            },
-            {
-                name: 'Cloudways',
-                type: 'Cloud',
-                summary: 'A managed cloud hosting platform that simplifies the process of deploying and managing applications on top cloud providers like AWS, Google Cloud, and DigitalOcean.',
-                details: `Cloudways is a specialized hosting service that takes the complexity out of cloud hosting. You can choose your preferred cloud provider, and Cloudways will handle the server management, security, and performance optimization. It's a great option for developers and agencies.`,
-                plans: `
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.inmotionhosting.com'
+        }, {
+            name: 'Cloudways',
+            type: 'Cloud',
+            summary: 'A managed cloud hosting platform that simplifies the process of deploying and managing applications on top cloud providers like AWS, Google Cloud, and DigitalOcean.',
+            details: `Cloudways is a specialized hosting service that takes the complexity out of cloud hosting. You can choose your preferred cloud provider, and Cloudways will handle the server management, security, and performance optimization. It's a great option for developers and agencies.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Customizable plans based on cloud provider and resource allocation.</li>
                     </ul>
                 `,
-                url: 'https://www.cloudways.com'
-            },
-            {
-                name: 'Kinsta',
-                type: 'Managed WordPress',
-                summary: 'A premium managed WordPress hosting provider focused on high performance, robust security, and exceptional support for WordPress websites.',
-                details: `Kinsta is a top-tier hosting solution for serious WordPress users. Their platform is built on Google Cloud, providing incredible speed and reliability. They offer daily backups, automatic scaling, and a team of WordPress experts ready to assist 24/7.`,
-                plans: `
+            cost: 'Variable (Pay-as-you-go)',
+            bestFor: 'Scalability, unpredictable traffic',
+            advantages: 'Scalability, reliability',
+            url: 'https://www.cloudways.com'
+        }, {
+            name: 'Kinsta',
+            type: 'Managed WordPress',
+            summary: 'A premium managed WordPress hosting provider focused on high performance, robust security, and exceptional support for WordPress websites.',
+            details: `Kinsta is a top-tier hosting solution for serious WordPress users. Their platform is built on Google Cloud, providing incredible speed and reliability. They offer daily backups, automatic scaling, and a team of WordPress experts ready to assist 24/7.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Starter: For a single WordPress installation.</li>
                         <li>Pro: For multiple websites and more traffic.</li>
                     </ul>
                 `,
-                url: 'https://kinsta.com'
-            },
-            {
-                name: 'Liquid Web',
-                type: 'VPS, Dedicated, Cloud',
-                summary: 'A premium hosting provider offering managed services for businesses with a focus on high-performance and "Heroic Support".',
-                details: `Liquid Web is a managed hosting solution for mission-critical sites. They do not offer shared hosting but specialize in VPS, dedicated, and cloud hosting with managed services. Their support is known for being fast and knowledgeable, and their infrastructure is designed for high availability and speed.`,
-                plans: `
+            cost: 'Medium to High',
+            bestFor: 'WordPress sites, bloggers',
+            advantages: 'Optimized performance, hands-off management',
+            url: 'https://kinsta.com'
+        }, {
+            name: 'Liquid Web',
+            type: 'VPS, Dedicated, Cloud',
+            summary: 'A premium hosting provider offering managed services for businesses with a focus on high-performance and "Heroic Support".',
+            details: `Liquid Web is a managed hosting solution for mission-critical sites. They do not offer shared hosting but specialize in VPS, dedicated, and cloud hosting with managed services. Their support is known for being fast and knowledgeable, and their infrastructure is designed for high availability and speed.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Managed VPS: Plans with various SSD storage and RAM configurations.</li>
                         <li>Dedicated Hosting: High-end servers for large enterprises.</li>
                     </ul>
                 `,
-                url: 'https://www.liquidweb.com'
-            },
-            {
-                name: 'HostGator',
-                type: 'Shared, VPS, Dedicated, WordPress',
-                summary: 'A popular and affordable hosting provider that offers a wide range of plans suitable for beginners and small businesses.',
-                details: `HostGator is well-known for its affordability and easy-to-use platform. They offer a 99.9% uptime guarantee and 24/7/365 customer support. Their plans come with a free domain and SSL certificate for the first year. It's a solid choice for those starting out.`,
-                plans: `
+            cost: 'High',
+            bestFor: 'Large businesses, high-traffic sites',
+            advantages: 'Maximum performance & control',
+            url: 'https://www.liquidweb.com'
+        }, {
+            name: 'HostGator',
+            type: 'Shared, VPS, Dedicated, WordPress',
+            summary: 'A popular and affordable hosting provider that offers a wide range of plans suitable for beginners and small businesses.',
+            details: `HostGator is well-known for its affordability and easy-to-use platform. They offer a 99.9% uptime guarantee and 24/7/365 customer support. Their plans come with a free domain and SSL certificate for the first year. It's a solid choice for those starting out.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Hatchling Plan: For a single website.</li>
@@ -448,106 +601,138 @@
                         <li>Business Plan: For small businesses with additional features.</li>
                     </ul>
                 `,
-                url: 'https://www.hostgator.com'
-            },
-            {
-                name: 'WPEngine',
-                type: 'Managed WordPress',
-                summary: 'A leading managed WordPress hosting provider that offers a powerful and secure platform for professional WordPress sites.',
-                details: `WPEngine specializes exclusively in WordPress hosting. Their platform is optimized for speed, security, and scalability, with features like automatic backups, staging environments, and advanced threat detection. It is a premium choice for serious WordPress developers and businesses.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.hostgator.com'
+        }, {
+            name: 'WPEngine',
+            type: 'Managed WordPress',
+            summary: 'A leading managed WordPress hosting provider that offers a powerful and secure platform for professional WordPress sites.',
+            details: `WPEngine specializes exclusively in WordPress hosting. Their platform is optimized for speed, security, and scalability, with features like automatic backups, staging environments, and advanced threat detection. It is a premium choice for serious WordPress developers and businesses.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Startup: For a single site with up to 25,000 monthly visits.</li>
                         <li>Growth: For up to 5 sites with more resources.</li>
                     </ul>
                 `,
-                url: 'https://wpengine.com'
-            },
-            {
-                name: 'Namecheap',
-                type: 'Shared, Reseller, VPS, Dedicated',
-                summary: 'Primarily a domain registrar, Namecheap also provides very affordable and reliable hosting solutions for individuals and small businesses.',
-                details: `Namecheap is a budget-friendly option that offers a great balance of cost and performance. Their hosting plans include a free SSL certificate, fast SSD storage, and 24/7 live chat support. It is a simple and effective solution for personal websites and small-scale projects.`,
-                plans: `
+            cost: 'Medium to High',
+            bestFor: 'WordPress sites, bloggers',
+            advantages: 'Optimized performance, hands-off management',
+            url: 'https://wpengine.com'
+        }, {
+            name: 'Namecheap',
+            type: 'Shared, Reseller, VPS, Dedicated',
+            summary: 'Primarily a domain registrar, Namecheap also provides very affordable and reliable hosting solutions for individuals and small businesses.',
+            details: `Namecheap is a budget-friendly option that offers a great balance of cost and performance. Their hosting plans include a free SSL certificate, fast SSD storage, and 24/7 live chat support. It is a simple and effective solution for personal websites and small-scale projects.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Stellar: Entry-level plan for up to 3 websites.</li>
                         <li>Stellar Plus: Unlimited websites and more storage.</li>
                     </ul>
                 `,
-                url: 'https://www.namecheap.com'
-            },
-            {
-                name: 'OVHcloud',
-                type: 'Shared, VPS, Dedicated, Public Cloud',
-                summary: 'A global cloud hosting provider with a focus on cost-effective solutions and high-performance infrastructure for businesses of all sizes.',
-                details: `OVHcloud offers a variety of hosting solutions with a strong emphasis on scalable and customizable cloud infrastructure. They provide competitive pricing and a global network of data centers, making them a good option for businesses with international audiences.`,
-                plans: `
-                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Eco: For simple, static sites.</li>
-                        <li>Business: For more demanding websites.</li>
-                    </ul>
-                `,
-                url: 'https://us.ovhcloud.com'
-            },
-            {
-                name: 'ScalaHosting',
-                type: 'Shared, VPS, Dedicated',
-                summary: 'Known for its managed VPS plans and the innovative SPanel, ScalaHosting provides a fast, secure, and user-friendly hosting experience.',
-                details: `ScalaHosting specializes in providing affordable and powerful managed VPS solutions. Their custom SPanel control panel is an excellent alternative to cPanel. They offer a strong focus on security, including SShield security, which can block 99.998% of web attacks in real-time.`,
-                plans: `
-                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Start: Entry-level VPS plan.</li>
-                        <li>Growth: More resources for growing sites.</li>
-                    </ul>
-                `,
-                url: 'https://www.scalahosting.com'
-            },
-            {
-                name: 'ResellerClub',
-                type: 'Reseller, Shared, VPS, Dedicated',
-                summary: 'A leading provider of reseller hosting services, offering a white-label platform for web professionals to start their own hosting business.',
-                details: `ResellerClub is a great choice for agencies and web designers who want to offer hosting to their clients. They provide a comprehensive suite of tools and a robust platform to manage hosting accounts, domains, and other web services.`,
-                plans: `
-                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Various plans tailored for reseller businesses.</li>
-                    </ul>
-                `,
-                url: 'https://www.resellerclub.com'
-            },
-            {
-                name: 'IONOS',
-                type: 'Shared, VPS, Dedicated, Cloud',
-                summary: 'A European-based hosting provider that offers a wide range of web hosting, cloud, and domain registration services at competitive prices.',
-                details: `IONOS is a comprehensive hosting solution for businesses and individuals. They are known for their reliable service, free domain and SSL certificate, and dedicated customer support. Their platform is user-friendly, making it a good choice for beginners.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.namecheap.com'
+        }, {
+            name: 'IONOS',
+            type: 'Shared, VPS, Dedicated, Cloud',
+            summary: 'A European-based hosting provider that offers a wide range of web hosting, cloud, and domain registration services at competitive prices.',
+            details: `IONOS is a comprehensive hosting solution for businesses and individuals. They are known for their reliable service, free domain and SSL certificate, and dedicated customer support. Their platform is user-friendly, making it a good choice for beginners.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>Essential: Entry-level plan.</li>
                         <li>Business: For more power and resources.</li>
                     </ul>
                 `,
-                url: 'https://www.ionos.com'
-            },
-            {
-                name: 'FastComet',
-                type: 'Shared, Cloud, VPS, Dedicated',
-                summary: 'A hosting provider that focuses on speed and customer satisfaction, offering a wide array of features including free daily backups and a robust firewall.',
-                details: `FastComet provides fast and secure hosting with a focus on a personalized customer experience. They offer a wide range of hosting types and are known for their great support and transparent pricing.`,
-                plans: `
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.ionos.com'
+        }, {
+            name: 'FastComet',
+            type: 'Shared, Cloud, VPS, Dedicated',
+            summary: 'A hosting provider that focuses on speed and customer satisfaction, offering a wide array of features including free daily backups and a robust firewall.',
+            details: `FastComet provides fast and secure hosting with a focus on a personalized customer experience. They offer a wide range of hosting types and are known for their great support and transparent pricing.`,
+            plans: `
                     <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
                     <ul class="list-disc list-inside space-y-1">
                         <li>FastCloud: Shared hosting with SSDs.</li>
                         <li>FastCloud Plus: More resources and features.</li>
                     </ul>
                 `,
-                url: 'https://www.fastcomet.com'
-            }
-        ];
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.fastcomet.com'
+        }, {
+            name: 'ScalaHosting',
+            type: 'Shared, VPS, Dedicated',
+            summary: 'Known for its managed VPS plans and the innovative SPanel, ScalaHosting provides a fast, secure, and user-friendly hosting experience.',
+            details: `ScalaHosting specializes in providing affordable and powerful managed VPS solutions. Their custom SPanel control panel is an excellent alternative to cPanel. They offer a strong focus on security, including SShield security, which can block 99.998% of web attacks in real-time.`,
+            plans: `
+                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Start: Entry-level VPS plan.</li>
+                        <li>Growth: More resources for growing sites.</li>
+                    </ul>
+                `,
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.scalahosting.com'
+        }, {
+            name: 'ResellerClub',
+            type: 'Reseller, Shared, VPS, Dedicated',
+            summary: 'A leading provider of reseller hosting services, offering a white-label platform for web professionals to start their own hosting business.',
+            details: `ResellerClub is a great choice for agencies and web designers who want to offer hosting to their clients. They provide a comprehensive suite of tools and a robust platform to manage hosting accounts, domains, and other web services.`,
+            plans: `
+                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Various plans tailored for reseller businesses.</li>
+                    </ul>
+                `,
+            cost: 'Medium to High',
+            bestFor: 'WordPress sites, bloggers',
+            advantages: 'Optimized performance, hands-off management',
+            url: 'https://www.resellerclub.com'
+        }, {
+            name: 'IONOS',
+            type: 'Shared, VPS, Dedicated, Cloud',
+            summary: 'A European-based hosting provider that offers a wide range of web hosting, cloud, and domain registration services at competitive prices.',
+            details: `IONOS is a comprehensive hosting solution for businesses and individuals. They are known for their reliable service, free domain and SSL certificate, and dedicated customer support. Their platform is user-friendly, making it a good choice for beginners.`,
+            plans: `
+                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Essential: Entry-level plan.</li>
+                        <li>Business: For more power and resources.</li>
+                    </ul>
+                `,
+            cost: 'Low',
+            bestFor: 'Beginners, blogs, small sites',
+            advantages: 'Very affordable, easy to use',
+            url: 'https://www.ionos.com'
+        }, {
+            name: 'FastComet',
+            type: 'Shared, Cloud, VPS, Dedicated',
+            summary: 'A hosting provider that focuses on speed and customer satisfaction, offering a wide array of features including free daily backups and a robust firewall.',
+            details: `FastComet provides fast and secure hosting with a focus on a personalized customer experience. They offer a wide range of hosting types and are known for their great support and transparent pricing.`,
+            plans: `
+                    <h4 class="font-bold text-lg mb-2">Popular Plans:</h4>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>FastCloud: Shared hosting with SSDs.</li>
+                        <li>FastCloud Plus: More resources and features.</li>
+                    </ul>
+                `,
+            cost: 'Medium',
+            bestFor: 'Growing businesses, e-commerce',
+            advantages: 'More control, better performance',
+            url: 'https://www.fastcomet.com'
+        }];
 
         // --- DOM Elements ---
         const providersList = document.getElementById('hosting-providers-list');
@@ -558,6 +743,8 @@
         const searchButton = document.getElementById('ai-search-button');
         const searchResults = document.getElementById('ai-search-results');
         const searchLoader = document.getElementById('ai-search-loader');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
         // --- Utility Functions ---
         // Function to sanitize HTML input
@@ -569,9 +756,7 @@
                 '"': '&quot;',
                 "'": '&#039;'
             };
-            return text.replace(/[&<>"']/g, function(m) {
-                return map[m];
-            });
+            return text.replace(/[&<>"']/g, (m) => map[m]);
         }
 
         // --- Modal Logic ---
@@ -637,6 +822,49 @@
         // --- AI Search Logic (using Gemini API) ---
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`;
         const apiKey = "";
+        const comparisonKeywords = ['compare', 'comparison', 'vs', 'versus'];
+
+        function renderComparisonTable() {
+            let tableHtml = `
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow">
+                        <thead class="bg-blue-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
+                                    Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
+                                    Best For
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
+                                    Advantages
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
+                                    Cost
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+            `;
+
+            hostingProviders.forEach(provider => {
+                tableHtml += `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-800">${escapeHtml(provider.name)}</td>
+                        <td class="px-6 py-4">${escapeHtml(provider.bestFor)}</td>
+                        <td class="px-6 py-4">${escapeHtml(provider.advantages)}</td>
+                        <td class="px-6 py-4">${escapeHtml(provider.cost)}</td>
+                    </tr>
+                `;
+            });
+
+            tableHtml += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            return tableHtml;
+        }
 
         async function fetchWithExponentialBackoff(url, options, maxRetries = 5, retryDelay = 1000) {
             for (let i = 0; i < maxRetries; i++) {
@@ -661,7 +889,7 @@
         }
 
         async function performSearch() {
-            const query = searchInput.value.trim();
+            const query = searchInput.value.trim().toLowerCase();
             if (!query) {
                 searchResults.innerHTML = `<p class="text-red-500">Please enter a question.</p>`;
                 return;
@@ -674,7 +902,7 @@
             const chatHistory = [{
                 role: "user",
                 parts: [{
-                    text: `Answer this question: "${query}"`
+                    text: `Answer this question about web hosting: "${query}"`
                 }]
             }];
             const payload = {
@@ -694,7 +922,6 @@
                 const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
 
                 if (text) {
-                    // Revert to using escapeHtml to prevent bold formatting
                     searchResults.innerHTML = `<p>${escapeHtml(text)}</p>`;
                 } else {
                     searchResults.innerHTML = `<p class="text-gray-500 italic">Could not generate a response. Please try a different query.</p>`;
@@ -713,6 +940,11 @@
             if (event.key === 'Enter') {
                 performSearch();
             }
+        });
+
+        // --- Mobile Menu Toggle Logic ---
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
         // Initial render of providers

@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBHOSTING</title>
+    <title>WEBHOSTING - Your Ultimate Guide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social icons and hamburger menu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLp3S6l0e0b9b3S8p2t8n0P8n6t5a6d5q2qG2a5l1b8f1g5b3f5z3e0b8d7e9b4d8a2a5g6b5g5e7e9f3g5f4d3c2c5c5g4a5f3g7f5l1" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        xintegrity="sha512-iecdLp3S6l0e0b9b3S8p2t8n0P8n6t5a6d5q2qG2a5l1b8f1g5b3f5z3e0b8d7e9b4d8a2a5g6b5g5e7e9f3g5f4d3c2c5c5g4a5f3g7f5l1"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -35,8 +37,6 @@
             /* Full height */
             overflow: auto;
             /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
             background-color: rgba(0, 0, 0, 0.7);
             /* Black w/ opacity */
             backdrop-filter: blur(5px);
@@ -55,6 +55,8 @@
             /* Could be more or less, depending on screen size */
             position: relative;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+            max-height: 90vh;
         }
 
         .close-button {
@@ -110,17 +112,22 @@
                 <li><a href="#privacy" class="hover:text-blue-200 transition-colors">Privacy Policy</a></li>
             </ul>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-2xl p-2 rounded-lg hover:bg-blue-700 transition duration-300">
+            <button id="mobile-menu-button"
+                class="md:hidden text-2xl p-2 rounded-lg hover:bg-blue-700 transition duration-300">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-blue-700 w-full">
             <ul class="flex flex-col space-y-2 px-4 py-4">
-                <li><a href="#about" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">About Us</a></li>
-                <li><a href="#contact" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Contact Us</a></li>
-                <li><a href="#disclaimer" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Disclaimer</a></li>
-                <li><a href="#privacy" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Privacy Policy</a></li>
+                <li><a href="#about" class="block py-2 hover:bg-blue-600 rounded-md transition-colors">About Us</a>
+                </li>
+                <li><a href="#contact"
+                        class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Contact Us</a></li>
+                <li><a href="#disclaimer"
+                        class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Disclaimer</a></li>
+                <li><a href="#privacy"
+                        class="block py-2 hover:bg-blue-600 rounded-md transition-colors">Privacy Policy</a></li>
             </ul>
         </div>
         <div class="container mx-auto px-4 py-12 md:py-20 flex flex-col items-center text-center">
@@ -129,7 +136,8 @@
                 A one-stop resource for understanding web hosting, choosing the right provider, and making your website
                 a success.
             </p>
-            <a href="#main-content" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-md">
+            <a href="#main-content"
+                class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors duration-300 shadow-md">
                 Get Started
             </a>
         </div>
@@ -181,73 +189,137 @@
                 <h2 class="text-2xl sm:text-3xl font-bold mb-6">A Simple Guide to Web Hosting: Your Website's Home</h2>
                 <div class="prose max-w-none text-justify">
                     <p class="mb-4">
-                        Think of the internet like a huge city. Every website you visit, from a small blog to a massive online store, needs a place to live. Web hosting is basically the service that gives your website a home so people can visit it. A web host is a company that has special computers called servers where your website's files are stored. When someone types your website's name into their browser, the server sends your site's files to their computer. Without hosting, your website would just be files sitting on your computer—no one else could see them!
+                        Think of the internet like a huge city. Every website you visit, from a small blog to a massive
+                        online store, needs a place to live. Web hosting is basically the service that gives your
+                        website a home so people can visit it. A web host is a company that has special computers
+                        called servers where your website's files are stored. When someone types your website's name
+                        into their browser, the server sends your site's files to their computer. Without hosting,
+                        your website would just be files sitting on your computer—no one else could see them!
                     </p>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Picking the Right Kind of Home for Your Website</h3>
                     <p class="mb-4">
-                        Just like a person can live in an apartment, a house, or a mansion, websites have different housing options too. Each type of hosting has its own pros and cons, depending on what your site needs.
+                        Just like a person can live in an apartment, a house, or a mansion, websites have different
+                        housing options too. Each type of hosting has its own pros and cons, depending on what your site
+                        needs.
                     </p>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">1. Shared Hosting: The Apartment Building</h4>
                     <p class="mb-4">
-                        This is the most common and cheapest option. With shared hosting, your website lives on a server with many other websites, kind of like sharing an apartment building with dozens of other tenants. You're all sharing the same resources, like CPU and memory. This is great if you're just starting out with a personal blog or a small business site, but if one of your "neighbors" gets a ton of traffic, it can slow down your site. Shared hosting is incredibly popular for new websites because of its affordability and ease of use. Most providers offer a simple one-click installation for platforms like WordPress, making it easy to get your site up and running in minutes. However, because you're sharing resources, you might experience slower load times during peak traffic periods. It's best suited for static websites, personal portfolios, and low-traffic blogs.
+                        This is the most common and cheapest option. With shared hosting, your website lives on a
+                        server with many other websites, kind of like sharing an apartment building with dozens of other
+                        tenants. You're all sharing the same resources, like CPU and memory. This is great if you're
+                        just starting out with a personal blog or a small business site, but if one of your "neighbors"
+                        gets a ton of traffic, it can slow down your site. Shared hosting is incredibly popular for new
+                        websites because of its affordability and ease of use. Most providers offer a simple one-click
+                        installation for platforms like WordPress, making it easy to get your site up and running in
+                        minutes. However, because you're sharing resources, you might experience slower load times
+                        during peak traffic periods. It's best suited for static websites, personal portfolios, and
+                        low-traffic blogs.
                     </p>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">2. VPS Hosting: The Condo</h4>
                     <p class="mb-4">
-                        VPS is the next step up. It's like living in a condo building. You're still sharing a physical building (the server), but you have your own private, locked-off unit (a virtual server) with dedicated resources. This means you get better performance and more control than shared hosting, without the high cost of a dedicated server. It's a perfect fit for a growing business or a more popular blog. VPS hosting provides a great balance between cost and performance. You have more control over the server environment and can install custom applications, which is a major advantage for developers and businesses with specific needs.
+                        VPS is the next step up. It's like living in a condo building. You're still sharing a physical
+                        building (the server), but you have your own private, locked-off unit (a virtual server) with
+                        dedicated resources. This means you get better performance and more control than shared hosting,
+                        without the high cost of a dedicated server. It's a perfect fit for a growing business or a more
+                        popular blog. VPS hosting provides a great balance between cost and performance. You have more
+                        control over the server environment and can install custom applications, which is a major
+                        advantage for developers and businesses with specific needs.
                     </p>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">3. Dedicated Hosting: The Mansion</h4>
                     <p class="mb-4">
-                        This is the top tier. With dedicated hosting, you have an entire server all to yourself—a mansion just for your website. This gives you unbeatable performance, total control, and maximum security. It's the best option for large companies, huge e-commerce sites, or anything with a ton of visitors. The only catch is that it's much more expensive and you'll need some technical know-how to manage it. Dedicated servers are ideal for websites that receive millions of visitors or require strict security and compliance standards. They offer unparalleled customization and reliability, but they come with a significant cost and maintenance responsibility.
+                        This is the top tier. With dedicated hosting, you have an entire server all to yourself—a mansion
+                        just for your website. This gives you unbeatable performance, total control, and maximum
+                        security. It's the best option for large companies, huge e-commerce sites, or anything with a ton
+                        of visitors. The only catch is that it's much more expensive and you'll need some technical
+                        know-how to manage it. Dedicated servers are ideal for websites that receive millions of
+                        visitors or require strict security and compliance standards. They offer unparalleled
+                        customization and reliability, but they come with a significant cost and maintenance
+                        responsibility.
                     </p>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">4. Cloud Hosting: The City That Never Sleeps</h4>
                     <p class="mb-4">
-                        Cloud hosting is a super flexible and reliable option. Instead of living on one server, your website is spread out across a network of connected servers. If one server goes down, another one instantly takes over. It's like having your own portable home that can be moved anywhere in the city at a moment's notice. The best part is you only pay for what you use, so it's awesome for websites with traffic that changes a lot, like a site that's about to go viral. This model is perfect for businesses with seasonal traffic spikes or large-scale applications that need to scale on demand.
+                        Cloud hosting is a super flexible and reliable option. Instead of living on one server, your
+                        website is spread out across a network of connected servers. If one server goes down, another one
+                        instantly takes over. It's like having your own portable home that can be moved anywhere in the
+                        city at a moment's notice. The best part is you only pay for what you use, so it's awesome for
+                        websites with traffic that changes a lot, like a site that's about to go viral. This model is
+                        perfect for businesses with seasonal traffic spikes or large-scale applications that need to
+                        scale on demand.
                     </p>
 
-                    <h4 class="text-lg font-medium mb-2 mt-4">5. Managed WordPress Hosting: The All-Inclusive Resort</h4>
+                    <h4 class="text-lg font-medium mb-2 mt-4">5. Managed WordPress Hosting: The All-Inclusive Resort
+                    </h4>
                     <p class="mb-4">
-                        If your website is built on WordPress, this is a great option. It's like checking into an all-inclusive resort for your site. The hosting company handles all the boring stuff for you: security, updates, backups, and making sure your site runs super fast. You get to focus on creating content and running your business, and they take care of everything else. It can cost a bit more, but the peace of mind is worth it for many people. Managed WordPress hosting is a premium service designed specifically for the platform, offering optimized performance and expert support that can save you a lot of time and effort.
+                        If your website is built on WordPress, this is a great option. It's like checking into an
+                        all-inclusive resort for your site. The hosting company handles all the boring stuff for you:
+                        security, updates, backups, and making sure your site runs super fast. You get to focus on
+                        creating content and running your business, and they take care of everything else. It can cost a
+                        bit more, but the peace of mind is worth it for many people. Managed WordPress hosting is a
+                        premium service designed specifically for the platform, offering optimized performance and
+                        expert support that can save you a lot of time and effort.
                     </p>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Choosing the Right Hosting Provider</h3>
                     <p class="mb-4">
-                        Picking a hosting company is a big deal, so you want to choose one that's the right fit. Don't just go for the cheapest one—think about what you'll really need. Here are a few things to look for:
+                        Picking a hosting company is a big deal, so you want to choose one that's the right fit. Don't
+                        just go for the cheapest one—think about what you'll really need. Here are a few things to look
+                        for:
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Uptime Guarantee:</strong> This is how often your website is online. Look for a host that promises 99.9% uptime or higher.</li>
-                        <li><strong>Customer Support:</strong> When something goes wrong, you want help fast. Check if they offer 24/7 support by chat or phone. Good support can be a lifesaver.</li>
-                        <li><strong>Speed and Performance:</strong> Slow websites can drive visitors away. Look for a host that uses fast hardware and offers a CDN (Content Delivery Network).</li>
-                        <li><strong>Security Features:</strong> Your site's safety is super important. Make sure they offer things like free SSL certificates and automatic backups.</li>
-                        <li><strong>Scalability:</strong> What if your website gets huge? Can you easily upgrade your plan to handle more traffic?</li>
-                        <li><strong>Pricing:</strong> Compare prices, but also look for a money-back guarantee. It's good to know you can get a refund if it's not the right fit.</li>
+                        <li><strong>Uptime Guarantee:</strong> This is how often your website is online. Look for a host
+                            that promises 99.9% uptime or higher.</li>
+                        <li><strong>Customer Support:</strong> When something goes wrong, you want help fast. Check if
+                            they offer 24/7 support by chat or phone. Good support can be a lifesaver.</li>
+                        <li><strong>Speed and Performance:</strong> Slow websites can drive visitors away. Look for a
+                            host that uses fast hardware and offers a CDN (Content Delivery Network).</li>
+                        <li><strong>Security Features:</strong> Your site's safety is super important. Make sure they
+                            offer things like free SSL certificates and automatic backups.</li>
+                        <li><strong>Scalability:</strong> What if your website gets huge? Can you easily upgrade your
+                            plan to handle more traffic?</li>
+                        <li><strong>Pricing:</strong> Compare prices, but also look for a money-back guarantee. It's
+                            good to know you can get a refund if it's not the right fit.</li>
                     </ul>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Detailed Hosting Provider Comparisons</h3>
                     <p class="mb-4">
-                        To help you narrow down your choices, here's a look at how some popular providers stack up against each other.
+                        To help you narrow down your choices, here's a look at how some popular providers stack up
+                        against each other.
                     </p>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">Hostinger vs. Bluehost</h4>
                     <p class="mb-2">
-                        Both Hostinger and Bluehost are excellent choices for beginners and small websites, but they have different strengths.
+                        Both Hostinger and Bluehost are excellent choices for beginners and small websites, but they
+                        have different strengths.
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Hostinger:</strong> Known for its incredibly low prices, often starting under $2 per month. It uses its own custom hPanel, which is very user-friendly. Their plans are fast and include a free SSL certificate. It's a fantastic value for new websites.</li>
-                        <li><strong>Bluehost:</strong> One of the most well-known hosts, officially recommended by WordPress. It's a safe bet for anyone using WordPress, offering a seamless integration and a free domain name for the first year. While their renewal prices can be higher, their initial low cost and included features make them a great choice.</li>
+                        <li><strong>Hostinger:</strong> Known for its incredibly low prices, often starting under $2 per
+                            month. It uses its own custom hPanel, which is very user-friendly. Their plans are fast and
+                            include a free SSL certificate. It's a fantastic value for new websites.</li>
+                        <li><strong>Bluehost:</strong> One of the most well-known hosts, officially recommended by
+                            WordPress. It's a safe bet for anyone using WordPress, offering a seamless integration and
+                            a free domain name for the first year. While their renewal prices can be higher, their
+                            initial low cost and included features make them a great choice.</li>
                     </ul>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">Cloudways vs. IONOS</h4>
                     <p class="mb-2">
-                        This is a comparison between two different types of hosting services. Cloudways is a managed cloud platform, while IONOS is a more traditional hosting provider.
+                        This is a comparison between two different types of hosting services. Cloudways is a managed
+                        cloud platform, while IONOS is a more traditional hosting provider.
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Cloudways:</strong> This is for users who need power and flexibility without the complexity of managing a cloud server. You can choose from top providers like AWS, Google Cloud, and DigitalOcean. It has a "pay-as-you-go" pricing model, which is great for websites with unpredictable traffic.</li>
-                        <li><strong>IONOS:</strong> A very affordable, all-in-one solution. They offer a wide range of products including hosting, domains, and email. Their plans are structured and simple to understand, making them a good fit for personal and small business sites that need a predictable, low-cost solution.</li>
+                        <li><strong>Cloudways:</strong> This is for users who need power and flexibility without the
+                            complexity of managing a cloud server. You can choose from top providers like AWS, Google
+                            Cloud, and DigitalOcean. It has a "pay-as-you-go" pricing model, which is great for
+                            websites with unpredictable traffic.</li>
+                        <li><strong>IONOS:</strong> A very affordable, all-in-one solution. They offer a wide range of
+                            products including hosting, domains, and email. Their plans are structured and simple to
+                            understand, making them a good fit for personal and small business sites that need a
+                            predictable, low-cost solution.</li>
                     </ul>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">GoDaddy vs. A2 Hosting</h4>
@@ -255,17 +327,29 @@
                         GoDaddy is a household name, but A2 Hosting has built a reputation on one key feature: speed.
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>GoDaddy:</strong> The go-to for many beginners for its simple, bundled services. You can get a domain and hosting in one place. Their plans are generally entry-level and come with a user-friendly control panel, but they may not be the fastest.</li>
-                        <li><strong>A2 Hosting:</strong> This host focuses on performance. They are well-known for their "Turbo Servers" which they claim are up to 20x faster. While their prices can be slightly higher, the performance boost is well worth it for users who prioritize site speed. They also have a reputation for excellent support.</li>
+                        <li><strong>GoDaddy:</strong> The go-to for many beginners for its simple, bundled services. You
+                            can get a domain and hosting in one place. Their plans are generally entry-level and come
+                            with a user-friendly control panel, but they may not be the fastest.</li>
+                        <li><strong>A2 Hosting:</strong> This host focuses on performance. They are well-known for their
+                            "Turbo Servers" which they claim are up to 20x faster. While their prices can be slightly
+                            higher, the performance boost is well worth it for users who prioritize site speed. They
+                            also have a reputation for excellent support.</li>
                     </ul>
 
                     <h4 class="text-lg font-medium mb-2 mt-4">Google Cloud vs. AWS Cloud</h4>
                     <p class="mb-2">
-                        These are not traditional web hosts. They are powerful cloud computing platforms designed for developers and large-scale applications.
+                        These are not traditional web hosts. They are powerful cloud computing platforms designed for
+                        developers and large-scale applications.
                     </p>
                     <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Google Cloud:</strong> This platform is known for its incredible speed and reliability. It's a great choice for companies that need powerful, scalable infrastructure and want to leverage Google's other services, like their machine learning tools. The interface is often considered more developer-friendly than AWS.</li>
-                        <li><strong>AWS (Amazon Web Services):</strong> The leader in the cloud computing market. AWS offers a massive suite of over 200 services. While it can be more complex to navigate, it provides unmatched flexibility and the ability to build and scale virtually any kind of application. It's the standard for many enterprise-level applications.</li>
+                        <li><strong>Google Cloud:</strong> This platform is known for its incredible speed and
+                            reliability. It's a great choice for companies that need powerful, scalable infrastructure
+                            and want to leverage Google's other services, like their machine learning tools. The
+                            interface is often considered more developer-friendly than AWS.</li>
+                        <li><strong>AWS (Amazon Web Services):</strong> The leader in the cloud computing market. AWS
+                            offers a massive suite of over 200 services. While it can be more complex to navigate, it
+                            provides unmatched flexibility and the ability to build and scale virtually any kind of
+                            application. It's the standard for many enterprise-level applications.</li>
                     </ul>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Web Hosting Comparison Table</h3>
@@ -273,19 +357,24 @@
                         <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow">
                             <thead class="bg-gray-50">
                                 <tr>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Provider
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Hosting Types
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Best For
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Key Advantages
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                         Cost
                                     </th>
                                 </tr>
@@ -295,28 +384,32 @@
                                     <td class="px-6 py-4 whitespace-nowrap">Hostinger</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Cloud, WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Budget-conscious users, beginners</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, user-friendly, good performance</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, user-friendly, good performance
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">Bluehost</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">WordPress users, beginners</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Officially recommended by WordPress, free domain</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Officially recommended by WordPress, free domain
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">SiteGround</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, Cloud, WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Speed-focused websites, excellent support</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">High performance, robust security, great support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High performance, robust security, great support
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">A2 Hosting</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud, WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Developers, users needing speed</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">High-speed "Turbo Servers", free site migration</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High-speed "Turbo Servers", free site migration
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium</td>
                                 </tr>
                                 <tr>
@@ -330,14 +423,16 @@
                                     <td class="px-6 py-4 whitespace-nowrap">DreamHost</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Users valuing privacy and support</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">97-day money-back guarantee, custom control panel</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">97-day money-back guarantee, custom control panel
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">GreenGeeks</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Reseller</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Eco-friendly users, beginners</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Environmentally friendly, free domain, fast support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Environmentally friendly, free domain, fast support
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
@@ -358,28 +453,32 @@
                                     <td class="px-6 py-4 whitespace-nowrap">Kinsta</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Managed WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">High-traffic WordPress sites, businesses</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Built on Google Cloud, premium performance, expert support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Built on Google Cloud, premium performance, expert
+                                        support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">High</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">Liquid Web</td>
                                     <td class="px-6 py-4 whitespace-nowrap">VPS, Dedicated, Cloud</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Large businesses, mission-critical sites</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">"Heroic Support", managed services, high availability</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">"Heroic Support", managed services, high availability
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">High</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">HostGator</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Beginners, blogs, small sites</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, easy to use, 99.9% uptime guarantee</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, easy to use, 99.9% uptime guarantee
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">WPEngine</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Managed WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Professional WordPress sites, agencies</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Secure, scalable, staging environments, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Secure, scalable, staging environments, excellent
+                                        support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium to High</td>
                                 </tr>
                                 <tr>
@@ -393,21 +492,24 @@
                                     <td class="px-6 py-4 whitespace-nowrap">IONOS</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Beginners, small businesses</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, all-in-one solution, free domain for 1st year</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, all-in-one solution, free domain for 1st
+                                        year</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">FastComet</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, Cloud, VPS, Dedicated</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Speed and customer service-focused users</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Fast SSD servers, free daily backups, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Fast SSD servers, free daily backups, excellent
+                                        support</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">ScalaHosting</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Users needing managed VPS solutions</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">Managed VPS, SPanel control panel, strong security</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Managed VPS, SPanel control panel, strong security
+                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium</td>
                                 </tr>
                                 <tr>
@@ -422,7 +524,13 @@
                     </div>
 
                     <p class="mb-4">
-                        Understanding the different types of web hosting and what to look for in a provider is the first and most crucial step in creating a successful online presence. The world of web hosting can seem a little confusing at first, but with the right knowledge, you can easily find a home for your website that works for you. Whether you're a brand new blogger or a seasoned pro, the right hosting provider is the unsung hero that keeps your online dreams running smoothly. By considering your budget, technical needs, and long-term goals, you can choose a hosting solution that provides a solid foundation for your website to grow and thrive.
+                        Understanding the different types of web hosting and what to look for in a provider is the first
+                        and most crucial step in creating a successful online presence. The world of web hosting can
+                        seem a little confusing at first, but with the right knowledge, you can easily find a home for
+                        your website that works for you. Whether you're a brand new blogger or a seasoned pro, the right
+                        hosting provider is the unsung hero that keeps your online dreams running smoothly. By
+                        considering your budget, technical needs, and long-term goals, you can choose a hosting solution
+                        that provides a solid foundation for your website to grow and thrive.
                     </p>
                 </div>
             </article>
@@ -442,7 +550,8 @@
 
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-gray-300 py-12 mt-8">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between space-y-8 md:space-y-0">
+        <div
+            class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between space-y-8 md:space-y-0">
             <div class="text-center md:text-left">
                 <p class="text-lg font-bold mb-2">WEBHOSTING</p>
                 <p>&copy; 2024 All rights reserved.</p>
@@ -703,7 +812,7 @@
                     </ul>
                 `,
             cost: 'Low',
-            bestFor: 'Beginners, blogs, small sites',
+            bestFor: 'Beginners, small businesses',
             advantages: 'Very affordable, easy to use',
             url: 'https://www.ionos.com'
         }, {
@@ -789,7 +898,8 @@
                     <p class="text-gray-700">${escapeHtml(provider.details)}</p>
                     ${provider.plans}
                     <div class="mt-4">
-                        <a href="${escapeHtml(provider.url)}" target="_blank" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 inline-block text-center">
+                        <a href="${escapeHtml(provider.url)}" target="_blank"
+                            class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 inline-block text-center">
                             Visit Official Website
                         </a>
                     </div>
@@ -816,7 +926,8 @@
             providersList.innerHTML = '';
             hostingProviders.forEach(provider => {
                 const card = document.createElement('div');
-                card.className = 'bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg';
+                card.className =
+                    'bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg';
                 card.innerHTML = `
                     <h4 class="text-xl font-bold mb-2 text-blue-600">${escapeHtml(provider.name)}</h4>
                     <p class="text-sm font-semibold text-gray-500 mb-2">${escapeHtml(provider.type)}</p>
@@ -841,8 +952,7 @@
         }
 
         // --- AI Search Logic (using Gemini API) ---
-        // IMPORTANT: The `apiKey` variable is automatically handled by the environment.
-        const apiKey = "";
+        const apiKey = ""; // This variable is automatically handled by the environment.
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         // Function to perform an API fetch with exponential backoff for retries
@@ -862,7 +972,6 @@
                     }
                     return response;
                 } catch (error) {
-                    // Log the error for debugging, but don't show it to the user right away
                     console.error(`Attempt ${i + 1} failed:`, error);
                     if (i === maxRetries - 1) throw error; // Re-throw the error on the last attempt
                     await new Promise(res => setTimeout(res, retryDelay));
@@ -884,7 +993,6 @@
             searchLoader.classList.remove('hidden');
             searchResults.innerHTML = '';
 
-            // This is the core payload for the Gemini API call
             const chatHistory = [{
                 role: "user",
                 parts: [{
@@ -911,7 +1019,8 @@
                 if (text) {
                     searchResults.innerHTML = `<p>${escapeHtml(text)}</p>`;
                 } else {
-                    searchResults.innerHTML = `<p class="text-gray-500 italic">Could not generate a response. Please try a different query.</p>`;
+                    searchResults.innerHTML =
+                        `<p class="text-gray-500 italic">Could not generate a response. Please try a different query.</p>`;
                 }
             } catch (error) {
                 console.error("Error fetching from Gemini API:", error);

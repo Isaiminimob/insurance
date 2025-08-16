@@ -269,9 +269,6 @@
                     </ul>
 
                     <h3 class="text-xl font-semibold mb-3 mt-6">Web Hosting Comparison Table</h3>
-                    <p class="mb-4">
-                        Here is a detailed comparison of some of the leading web hosting providers to help you make an informed decision based on your specific needs.
-                    </p>
                     <div class="overflow-x-auto mb-6">
                         <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow">
                             <thead class="bg-gray-50">
@@ -844,41 +841,50 @@
         }
 
         // --- AI Search Logic (using Gemini API) ---
-        const apiKey = ""; // This variable is automatically populated by the environment.
+        // IMPORTANT: The `apiKey` variable is automatically handled by the environment.
+        const apiKey = "";
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
+        // Function to perform an API fetch with exponential backoff for retries
         async function fetchWithExponentialBackoff(url, options, maxRetries = 5, retryDelay = 1000) {
             for (let i = 0; i < maxRetries; i++) {
                 try {
                     const response = await fetch(url, options);
                     if (response.status === 429) {
+                        // Too many requests, wait and retry
                         await new Promise(res => setTimeout(res, retryDelay));
                         retryDelay *= 2; // Exponential backoff
                         continue;
                     }
                     if (!response.ok) {
+                        // Handle other HTTP errors
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response;
                 } catch (error) {
-                    if (i === maxRetries - 1) throw error;
+                    // Log the error for debugging, but don't show it to the user right away
+                    console.error(`Attempt ${i + 1} failed:`, error);
+                    if (i === maxRetries - 1) throw error; // Re-throw the error on the last attempt
                     await new Promise(res => setTimeout(res, retryDelay));
                     retryDelay *= 2;
                 }
             }
         }
 
+        // Function to handle the search operation
         async function performSearch() {
-            const query = searchInput.value.trim().toLowerCase();
+            const query = searchInput.value.trim();
             if (!query) {
                 searchResults.innerHTML = `<p class="text-red-500">Please enter a question.</p>`;
                 return;
             }
 
+            // Disable button and show loader while searching
             searchButton.disabled = true;
             searchLoader.classList.remove('hidden');
             searchResults.innerHTML = '';
 
+            // This is the core payload for the Gemini API call
             const chatHistory = [{
                 role: "user",
                 parts: [{
@@ -890,6 +896,7 @@
             };
 
             try {
+                // Perform the fetch with retry logic
                 const response = await fetchWithExponentialBackoff(apiUrl, {
                     method: 'POST',
                     headers: {
@@ -910,11 +917,13 @@
                 console.error("Error fetching from Gemini API:", error);
                 searchResults.innerHTML = `<p class="text-red-500">An error occurred. Please try again later.</p>`;
             } finally {
+                // Re-enable button and hide loader
                 searchButton.disabled = false;
                 searchLoader.classList.add('hidden');
             }
         }
 
+        // Event listeners for the search functionality
         searchButton.addEventListener('click', performSearch);
         searchInput.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {

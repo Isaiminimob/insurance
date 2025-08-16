@@ -337,6 +337,20 @@
                                     <td class="px-6 py-4 whitespace-nowrap">Low</td>
                                 </tr>
                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">GreenGeeks</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Reseller</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Eco-friendly users, beginners</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Environmentally friendly, free domain, fast support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">InMotion Hosting</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Growing businesses, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">High reliability, great support, free SSDs</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Medium</td>
+                                </tr>
+                                <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">Cloudways</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Cloud</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Scalability, developers, agencies</td>
@@ -358,10 +372,52 @@
                                     <td class="px-6 py-4 whitespace-nowrap">High</td>
                                 </tr>
                                 <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">HostGator</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, WordPress</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Beginners, blogs, small sites</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, easy to use, 99.9% uptime guarantee</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">WPEngine</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Managed WordPress</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Professional WordPress sites, agencies</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Secure, scalable, staging environments, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Medium to High</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Namecheap</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, Reseller, VPS, Dedicated</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Beginners, budget-conscious users</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Very affordable, free SSL, easy to use</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">IONOS</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated, Cloud</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Beginners, small businesses</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Affordable, all-in-one solution, free domain for 1st year</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Low</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">FastComet</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, Cloud, VPS, Dedicated</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Speed and customer service-focused users</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Fast SSD servers, free daily backups, excellent support</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Medium</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">ScalaHosting</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Shared, VPS, Dedicated</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Users needing managed VPS solutions</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Managed VPS, SPanel control panel, strong security</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Medium</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">ResellerClub</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Reseller, Shared, VPS, Dedicated</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Web professionals, agencies</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">White-label platform, extensive product suite</td>
                                     <td class="px-6 py-4 whitespace-nowrap">Medium to High</td>
                                 </tr>
                             </tbody>
@@ -634,8 +690,8 @@
                     </ul>
                 `,
             cost: 'Low',
-            bestFor: 'Beginners, blogs, small sites',
-            advantages: 'Very affordable, easy to use',
+            bestFor: 'Beginners, budget-conscious users',
+            advantages: 'Very affordable, free SSL, easy to use',
             url: 'https://www.namecheap.com'
         }, {
             name: 'IONOS',
@@ -788,58 +844,14 @@
         }
 
         // --- AI Search Logic (using Gemini API) ---
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=`;
-        const apiKey = "";
-        const comparisonKeywords = ['compare', 'comparison', 'vs', 'versus'];
-
-        function renderComparisonTable() {
-            let tableHtml = `
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden shadow">
-                        <thead class="bg-blue-50">
-                            <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    Name
-                                </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    Best For
-                                </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    Advantages
-                                </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                    Cost
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-            `;
-
-            hostingProviders.forEach(provider => {
-                tableHtml += `
-                    <tr>
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-800">${escapeHtml(provider.name)}</td>
-                        <td class="px-6 py-4">${escapeHtml(provider.bestFor)}</td>
-                        <td class="px-6 py-4">${escapeHtml(provider.advantages)}</td>
-                        <td class="px-6 py-4">${escapeHtml(provider.cost)}</td>
-                    </tr>
-                `;
-            });
-
-            tableHtml += `
-                        </tbody>
-                    </table>
-                </div>
-            `;
-            return tableHtml;
-        }
+        const apiKey = ""; // This variable is automatically populated by the environment.
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         async function fetchWithExponentialBackoff(url, options, maxRetries = 5, retryDelay = 1000) {
             for (let i = 0; i < maxRetries; i++) {
                 try {
                     const response = await fetch(url, options);
                     if (response.status === 429) {
-                        console.log(`Rate limit exceeded. Retrying in ${retryDelay}ms...`);
                         await new Promise(res => setTimeout(res, retryDelay));
                         retryDelay *= 2; // Exponential backoff
                         continue;
@@ -878,7 +890,7 @@
             };
 
             try {
-                const response = await fetchWithExponentialBackoff(apiUrl + apiKey, {
+                const response = await fetchWithExponentialBackoff(apiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
